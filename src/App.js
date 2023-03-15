@@ -1,19 +1,21 @@
 import React from 'react'
 import './App.css';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Header from './components/Header';
 import Products from './components/Products';
-import ProductDetails from './components/ProductDetails';
+// import AllProducts from './components/AllProducts';
+import ProductDetailes from './components/ProductDetails' 
 
 const App = () => {
+
   return (
     <div className="App">
       <Router>
         <Header />
-        <Switch>
-          <Route exact path='/' Component={Products} />
-          <Route exact path='/products/:id' Component={ProductDetails} />
-        </Switch>
+        <Routes>
+          <Route  path='/' element={<Products />} />
+          <Route  path='/product/:id' element={<ProductDetailes />} />
+        </Routes>
       </Router>
     </div>
   );

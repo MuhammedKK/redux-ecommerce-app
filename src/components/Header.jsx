@@ -1,8 +1,15 @@
 import React from 'react'
 
-const Header = () => {
+const Header = (props) => {
+
+  console.log(props)
+
   return (
-    <div>Header</div>
+    <div className='ui fixed menu'>
+      <div className="ui container center">
+        <h2>Ecommerce APP</h2>
+      </div>
+    </div>
   )
 }
 
